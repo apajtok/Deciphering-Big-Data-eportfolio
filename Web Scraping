@@ -1,0 +1,22 @@
+!pip install requests
+!pip install beautifulsoup4
+
+import requests
+import json
+from bs4 import BeautifulSoup
+
+url = "https://365datascience.com/career-advice/data-scientist-job-market/"
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'html.parser')
+
+results = soup.find_all(string=lambda text: "Data Scientist" in text)
+
+data = []  # Create an empty list to store the data
+for result in results:
+    data.append({"text": result.strip()})  # Add each finding as a dictionary
+
+# Save the data to a JSON file
+with open("data_scientist_results.json", "w") as f:
+    json.dump(data, f, indent=4)  # Use indent for better readability
+
+print(f"Data saved to data_scientist_results.json")
