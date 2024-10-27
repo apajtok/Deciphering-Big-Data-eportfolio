@@ -127,39 +127,70 @@ Kazil, J. and Jarmul, K. (2016). Data Wrangling with Python. ‘O’Reilly Media
 									<header class="major">
                                                                                 <h3>Normalisation </a></h3>
 										<p>1. First Normal Form (1NF)
-Eliminate repeating groups: The original table has repeating groups for Exam Boards and Teacher Name. To achieve 1NF, we need to separate these into new tables.
-Create new tables:
-Students: Student Number (PK), Student Name, Date of Birth, Support
-Courses: Course Name (PK)
-Exams: Exam ID (PK), Student Number (FK), Course Name (FK), Exam Score
-Exam Boards: Board ID (PK), Exam Board Name
-Teachers: Teacher ID (PK), Teacher Name
-CourseExams: CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)
-CourseTeachers: CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)
-Assign primary keys (PK) and foreign keys (FK): I've indicated these in the table descriptions above.
-2. Second Normal Form (2NF)
-1NF and... Eliminate redundant data: In the Exams table, Exam Score depends on the combination of Student Number and Course Name (the composite primary key). This means we need to create a new table to remove this redundancy.
-Create a new table:
-StudentCourses: StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score
-Remove Exam Score from the Exams table.
-3. Third Normal Form (3NF)
-2NF and... Eliminate columns not dependent on the key: In the Students table, Support might be related to a student's course or a specific learning need, not just the student themselves. We'll create a new table to capture this.
-Create a new table:
-Support: Support ID (PK), Support Type
-StudentSupport: StudentSupport ID (PK), Student Number (FK), Support ID (FK)
-Remove Support from the Students table.
-Final Tables in 3NF:
-Students: Student Number (PK), Student Name, Date of Birth
-Courses: Course Name (PK)
-Exams: Exam ID (PK), Student Number (FK), Course Name (FK)
-Exam Boards: Board ID (PK), Exam Board Name
-Teachers: Teacher ID (PK), Teacher Name
-CourseExams: CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)
-CourseTeachers: CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)
-StudentCourses: StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score
-Support: Support ID (PK), Support Type
-StudentSupport: StudentSupport ID (PK), Student Number (FK), Support ID (FK)
-This 3NF structure eliminates redundancy and ensures data integrity.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Database Normalization</title>
+</head>
+<body>
+
+  <h2>Database Normalization Example</h2>
+
+  <h3>1. First Normal Form (1NF)</h3>
+  <p><strong>Eliminate repeating groups:</strong> The original table has repeating groups for Exam Boards and Teacher Name. To achieve 1NF, I separated these into new tables.</p>
+
+  <p><strong>New tables:</strong></p>
+  <ul>
+    <li><strong>Students:</strong> Student Number (PK), Student Name, Date of Birth, Support</li>
+    <li><strong>Courses:</strong> Course Name (PK)</li>
+    <li><strong>Exams:</strong> Exam ID (PK), Student Number (FK), Course Name (FK), Exam Score</li>
+    <li><strong>Exam Boards:</strong> Board ID (PK), Exam Board Name</li>
+    <li><strong>Teachers:</strong> Teacher ID (PK), Teacher Name</li>
+    <li><strong>CourseExams:</strong> CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)</li>
+    <li><strong>CourseTeachers:</strong> CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)</li>
+  </ul>
+
+  <p><strong>Assign primary keys (PK) and foreign keys (FK):</strong> I've indicated these in the table descriptions above.</p>
+
+  <h3>2. Second Normal Form (2NF)</h3>
+  <p>1NF and... <strong>Eliminate redundant data:</strong> In the <code>Exams</code> table, <code>Exam Score</code> depends on the combination of <code>Student Number</code> and <code>Course Name</code> (the composite primary key). This means we need to create a new table to remove this redundancy.</p>
+
+  <p><strong>Create a new table:</strong></p>
+  <ul>
+    <li><strong>StudentCourses:</strong> StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score</li>
+  </ul>
+
+  <p><strong>Remove <code>Exam Score</code> from the <code>Exams</code> table.</strong></p>
+
+  <h3>3. Third Normal Form (3NF)</h3>
+  <p>2NF and... <strong>Eliminate columns not dependent on the key:</strong> In the <code>Students</code> table, <code>Support</code> might be related to a student's course or a specific learning need, not just the student themselves. We'll create new tables to capture this.</p>
+
+  <p><strong>Create new tables:</strong></p>
+  <ul>
+    <li><strong>Support:</strong> Support ID (PK), Support Type</li>
+    <li><strong>StudentSupport:</strong> StudentSupport ID (PK), Student Number (FK), Support ID (FK)</li>
+  </ul>
+
+  <p><strong>Remove <code>Support</code> from the <code>Students</code> table.</strong></p>
+
+  <h3>Final Tables in 3NF:</h3>
+  <ul>
+    <li><strong>Students:</strong> Student Number (PK), Student Name, Date of Birth</li>
+    <li><strong>Courses:</strong> Course Name (PK)</li>
+    <li><strong>Exams:</strong> Exam ID (PK), Student Number (FK), Course Name (FK)</li>
+    <li><strong>Exam Boards:</strong> Board ID (PK), Exam Board Name</li>
+    <li><strong>Teachers:</strong> Teacher ID (PK), Teacher Name</li>
+    <li><strong>CourseExams:</strong> CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)</li>
+    <li><strong>CourseTeachers:</strong> CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)</li>
+    <li><strong>StudentCourses:</strong> StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score</li>
+    <li><strong>Support:</strong> Support ID (PK), Support Type</li>
+    <li><strong>StudentSupport:</strong> StudentSupport ID (PK), Student Number (FK), Support ID (FK)</li>
+  </ul>
+
+  <p>This 3NF structure eliminates redundancy and ensures data integrity.</p>
+
+</body>
+</html>.</p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/1NF.pdf">1NF</a></p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/mn_headers_updated.csv">2NF</a></p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/mn_headers_updated.csv">3NF</a></p>
