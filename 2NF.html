@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2NF Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>2. Second Normal Form (2NF)</h2>
+
+  <p>1NF and... <strong>Eliminate redundant data:</strong> In the <code>Exams</code> table, <code>Exam Score</code> depends on the combination of <code>Student Number</code> and <code>Course Name</code> (the composite primary key). This means we need to create a new table to remove this redundancy.</p>
+
+  <p><strong>Create a new table:</strong></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>StudentCourses</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>StudentCourse ID (PK)</td>
+        <td>Student Number (FK)</td>
+        <td>Course Name (FK)</td>
+        <td>Exam Score</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1001</td>
+        <td>Computer Science</td>
+        <td>78</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1001</td>
+        <td>Maths</td>
+        <td>78</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>1001</td>
+        <td>Physics</td>
+        <td>78</td>
+      </tr>
+      </tbody>
+  </table>
+
+  <p><strong>Remove <code>Exam Score</code> from the <code>Exams</code> table.</strong></p>
+
+</body>
+</html>
