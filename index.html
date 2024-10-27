@@ -126,8 +126,43 @@ Kazil, J. and Jarmul, K. (2016). Data Wrangling with Python. ‘O’Reilly Media
 									</span>
 									<header class="major">
                                                                                 <h3>Normalisation </a></h3>
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
+										<p>1. First Normal Form (1NF)
+Eliminate repeating groups: The original table has repeating groups for Exam Boards and Teacher Name. To achieve 1NF, we need to separate these into new tables.
+Create new tables:
+Students: Student Number (PK), Student Name, Date of Birth, Support
+Courses: Course Name (PK)
+Exams: Exam ID (PK), Student Number (FK), Course Name (FK), Exam Score
+Exam Boards: Board ID (PK), Exam Board Name
+Teachers: Teacher ID (PK), Teacher Name
+CourseExams: CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)
+CourseTeachers: CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)
+Assign primary keys (PK) and foreign keys (FK): I've indicated these in the table descriptions above.
+2. Second Normal Form (2NF)
+1NF and... Eliminate redundant data: In the Exams table, Exam Score depends on the combination of Student Number and Course Name (the composite primary key). This means we need to create a new table to remove this redundancy.
+Create a new table:
+StudentCourses: StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score
+Remove Exam Score from the Exams table.
+3. Third Normal Form (3NF)
+2NF and... Eliminate columns not dependent on the key: In the Students table, Support might be related to a student's course or a specific learning need, not just the student themselves. We'll create a new table to capture this.
+Create a new table:
+Support: Support ID (PK), Support Type
+StudentSupport: StudentSupport ID (PK), Student Number (FK), Support ID (FK)
+Remove Support from the Students table.
+Final Tables in 3NF:
+Students: Student Number (PK), Student Name, Date of Birth
+Courses: Course Name (PK)
+Exams: Exam ID (PK), Student Number (FK), Course Name (FK)
+Exam Boards: Board ID (PK), Exam Board Name
+Teachers: Teacher ID (PK), Teacher Name
+CourseExams: CourseExam ID (PK), Course Name (FK), Exam ID (FK), Board ID (FK)
+CourseTeachers: CourseTeacher ID (PK), Course Name (FK), Teacher ID (FK)
+StudentCourses: StudentCourse ID (PK), Student Number (FK), Course Name (FK), Exam Score
+Support: Support ID (PK), Support Type
+StudentSupport: StudentSupport ID (PK), Student Number (FK), Support ID (FK)
+This 3NF structure eliminates redundancy and ensures data integrity.</p>
+<a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/replace%20headers%20script.py">1NF</a></p>
+<a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/mn_headers_updated.csv">2NF</a></p>
+<a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/mn_headers_updated.csv">3NF</a></p>
 									</header>
 								</article>
 							</section>
