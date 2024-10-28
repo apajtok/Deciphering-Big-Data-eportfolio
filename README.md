@@ -8,7 +8,7 @@ I'm a marketer with a strong business background and a growing passion for data 
 
 * Business Administration background
 * Master's degree in Business & Management and Marketing
-* 18+ years of experience in marketing, collaborating closely with developers
+* 18+ years of experience in digital marketing, collaborating closely with developers
 
 **Current Focus:**
 
