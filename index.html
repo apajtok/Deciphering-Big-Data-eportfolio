@@ -48,7 +48,7 @@
 </ul>
 <br>
 To manage data latency and accuracy, architectures like Lambda separate data into batch (cold) and real-time (hot) paths, whereas Kappa, a simplified approach, relies on a single stream processing path. Lambda’s dual path can create complexity but enables low-latency responses in critical scenarios. In contrast, Kappa handles all data in real-time with reduced complexity.
-The Internet of Things (IoT), encompassing connected devices from smartphones to industrial sensors, relies on event-driven architectures for processing data in real-time. (Zoiner Tejada (n.d.) As discussed by Hasan, M. K. et al. (2024) processing in IoT includes storing event data, real-time analytics for anomaly detection, handling device notifications, and machine learning. However, IoT data security remains challenging due to resource limitations in many devices. Solutions like identity-based and blockchain authentication protocols are employed to secure data exchanges. 
+(Zoiner Tejada (n.d.) As discussed by Hasan, M. K. et al. (2024) processing in IoT includes storing event data, real-time analytics for anomaly detection, handling device notifications, and machine learning. Solutions like identity-based and blockchain authentication protocols are employed to secure data exchanges. 
 <br>
 Cloud computing is foundational for IoT, supporting storage, processing, and analytics, thus playing a crucial role in powering IoT solutions. Future developments focus on enhancing security and scalability for increasing IoT data flows. Cloud Computing has a pivotal role to power IoT Solutions IoT. (Gondosubroto, R, 2024)
 </p>
@@ -110,19 +110,9 @@ A., Sakshaug, J. &. Williams, R. (2020) Data cleaning. Sage Foundation.
 									</span>
 									<header class="major">
                                                                                 <h3>Automation And Scaling </a></h3>
-										<p>Automating tasks requires a structured approach to ensure reliability and efficiency. Firstly, each task must be clarified, including the start time, time limits, required inputs, expected outputs, and criteria for success. In case of failure contingency plan is needed, and outline what should steps should be post-completion. The steps for automation include:
+										<p>Automating tasks requires a structured approach to ensure reliability and efficiency. Firstly, each task must be clarified, including the start time, time limits, required inputs, expected outputs, and criteria for success. In case of failure contingency plan is needed, and outline what should steps should be post-completion. 
 
-Break down the problem into manageable parts.
-Define inputs, processes, and success criteria for each part.
-Locate necessary resources and schedule tasks.
-Develop and test code with sample data.
-Clean and document the code.
-Implement logging to track errors and successful completions.
-Submit, test, and refine code as needed.
-Replace manual steps with automation.
-Monitor logs for errors and make adjustments.
-Establish a regular log-checking schedule.
-Common issues to watch include database errors, script bugs, timeouts, edge cases, and hardware limitations. Examples: Parallel processing, distributed processing, simple automation, large scale automation, automation monitoring. </p>
+ </p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/parallel_processing.py">Parallel processing here</a></p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/distributed_processing.py">Distributed processing here</a></p>
 <a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/simple_automation.py">Simple automation</a></p>
@@ -167,7 +157,7 @@ Kazil, J. and Jarmul, K. (2016). Data Wrangling with Python. ‘O’Reilly Media
   <p><strong>Remove <code>Exam Score</code> from the <code>Exams</code> table.</strong></p>
 
   <h3>3. Third Normal Form (3NF)</h3>
-  <p>2NF and... <strong>Eliminate columns not dependent on the key:</strong> In the <code>Students</code> table, <code>Support</code> might be related to a student's course or a specific learning need, not just the student themselves. We'll create new tables to capture this.</p>
+  <p>2NF and... <strong>Eliminate columns not dependent on the key:</strong> In the <code>Students</code> table, <code>Support</code> might be related to a student's course or a specific learning need, not just the student themselves. Therefore new tables are required.</p>
 
   <p><strong>Create new tables:</strong></p>
   <ul>
