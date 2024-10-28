@@ -236,9 +236,31 @@ White & Case (n. d.) GDPR Guide to National Implementation: United Kingdom. Avai
                                                         	</header>
 													<header class="major">
 										<h3><a>API Security Requirements</a></h3>
-										<p>For a data analyst to be able to read and understand web pages is a crucial. Python has commonly used library to read, download, format data. This library is called BeautifulSoup (its current version is bs4, the 4th version). bs4 is used to get data from HTML or XML documents and it supports parsers. (Tirthajyoti Sarkar and Shubhadeep Roychowdhury, 2019)</p>
-								<a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/Web%20Scraping">Code here</a></p>
-								<a href="https://github.com/apajtok/Deciphering-Big-Data-eportfolio/blob/main/data_scientist_results.json">Json file here</a></p>
+										<p> Vertex AI API Security Requirements
+The Vertex AI API enables powerful machine learning capabilities, but it's crucial to secure data sharing, scraping, and connectivity between Python code and data formats like XML, JSON, and SQL. Here's a brief security requirements specification:
+1. Authentication and Authorization:
+Strong authentication: Use robust methods like OAuth 2.0 for API access control, ensuring only authorized users and applications can interact with the API.
+Role-based access control (RBAC): Implement fine-grained access control based on user roles, limiting access to specific resources and functionalities within the API.
+2. Data Protection:
+Data encryption: Encrypt all data in transit using HTTPS and at rest using encryption mechanisms provided by Google Cloud Platform.
+Data validation: Implement input validation to prevent malicious or malformed data from being processed by the API, mitigating risks like SQL injection.
+Secure data storage: Leverage secure storage solutions like Cloud Storage with appropriate access controls for data used by the API.
+3. API Security Best Practices:
+Rate limiting: Implement rate limiting to prevent abuse and denial-of-service attacks.
+Logging and monitoring: Log API activity and monitor for suspicious patterns to detect potential security breaches.
+Vulnerability scanning: Regularly scan the API and its dependencies for vulnerabilities and apply security patches promptly.
+4. Python Code Security:
+Secure coding practices: Follow secure coding guidelines to prevent vulnerabilities in the Python code interacting with the API.
+Dependency management: Use a dependency management tool like pip with version pinning to ensure secure and consistent dependencies.
+5. Data Format Specific Considerations:
+XML and JSON: Validate incoming XML and JSON data against schemas to ensure data integrity and prevent injection attacks.
+SQL: Use parameterized queries or prepared statements to prevent SQL injection vulnerabilities when interacting with SQL databases.
+By adhering to these security requirements, we can mitigate risks associated with the Vertex AI API and ensure secure data sharing, scraping, and connectivity with various data formats.</p>
+</p>
+<h4>References</h4> 
+<p>
+Google Cloud. (2024). Authenticate to Vertex AI. [online] Available at: https://cloud.google.com/vertex-ai/docs/authentication [Accessed 28 Oct. 2024].
+</p>								
                                                         	</header>
 									<header class="major">
 										<h3><a>Critical Evaluation Of The Disaster Recovery System Called The “Grandfather-Father-Son" GFS Backup </a></h3>
