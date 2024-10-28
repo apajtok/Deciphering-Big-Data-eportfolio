@@ -1,0 +1,33 @@
+Save the updated CSV file (mn_headers_updated.csv) into a relational database (e.g., SQLite) within Colab environment:
+
+1. Install the necessary library:
+
+ 
+!pip install sqlalchemy==1.4.47 # Install SQLAlchemy for database interactions
+Use code with caution
+2. Import necessary libraries:
+
+ 
+import pandas as pd
+from sqlalchemy import create_engine
+Use code with caution
+3. Create a SQLite database and connect to it:
+
+ 
+engine = create_engine('sqlite:///my_database.db') # Creates a database in current directory
+Use code with caution
+4. Read the updated CSV file into a Pandas DataFrame:
+
+ 
+updated_df = pd.read_csv('/content/mn_headers_updated.csv')
+Use code with caution
+5. Save the DataFrame to a table in the database:
+
+ 
+updated_df.to_sql('my_table', engine, if_exists='replace', index=False)
+Use code with caution
+Reasoning:
+
+SQLAlchemy: Provides a way to interact with various databases using Python.
+create_engine: Creates a connection to the database. Here, it creates a SQLite database named 'my_database.db'.
+to_sql: Saves the Pandas DataFrame to a table within the database. if_exists='replace' will replace the table if it already exists. You can use append to add new rows instead.
