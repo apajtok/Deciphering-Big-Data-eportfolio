@@ -234,7 +234,7 @@ Tirthajyoti Sarkar and Shubhadeep Roychowdhury (2019). Data wrangling with Pytho
 										<p>
 The UK GDPR, largely based on the 1998 Data Protection Act, outlines seven core principles for responsible data handling: lawfulness, fairness, and transparency; purpose limitation; data minimization; accuracy; storage limitation; integrity and confidentiality; and accountability (Information Commissioner's Office, 2023). Non-compliance can result in substantial fines (up to £17.5 million or 4% of global turnover). The UK GDPR mandates robust security measures, including encryption and access controls, to protect personal data (Intersoft Consulting, 2013). Both data controllers and processors are responsible for implementing these measures and ensuring that anyone handling personal data does so according to instructions and legal requirements.   
 Key Differences from EU GDPR
-While the UK and EU GDPR share the same fundamental principles and objectives, there are subtle differences in their implementation. The EU GDPR provides broader guidelines, allowing individual member states to define specific details and enforcement mechanisms (White & Case, n.d.). In contrast, the UK's Data Protection Act offers more specific guidance and best practices for implementing GDPR principles, including a risk-based approach to data security (European Parliament, 2016; UK Government, 2018). These are the UK GDPR specifics: Conduct DPIAs to identify data processing risks and prioritize mitigation; implement tailored technical and organizational measures (e.g., encryption, access controls); establish clear data retention policies; provide regular staff training on data protection; develop an incident management plan for swift breach response; and maintain detailed records to demonstrate compliance. As discussed by Burgess (2020)The UK’s Information Commissioner’s Office (ICO) enforces data protection laws, particularly the UK GDPR. 
+While the UK and EU GDPR share the same fundamental principles and objectives, there are subtle differences in their implementation. The EU GDPR provides broader guidelines, allowing individual member states to define specific details and enforcement mechanisms (White & Case, n.d.). In contrast, the UK's Data Protection Act offers more specific guidance and best practices for implementing GDPR principles, including a risk-based approach to data security (European Parliament, 2016; UK Government, 2018). These are the UK GDPR specifics: Conduct DPIAs to identify data processing risks and prioritize mitigation; implement tailored technical and organizational measures (e.g., encryption, access controls); establish clear data retention policies; provide regular staff training on data protection; develop an incident management plan for swift breach response; and maintain detailed records to demonstrate compliance. As discussed by Burgess (2020)The UK’s Information Commissioner’s Office (ICO) enforces data protection laws, including the UK GDPR. 
 </p>
 <h4>References</h4> 
 <p>
@@ -246,23 +246,23 @@ Burgess, M. (2020). What is GDPR? The summary guide to GDPR compliance in the UK
                                                         	</header>
 													<header class="major">
 										<h3><a>API Security Requirements</a></h3>
-										<p> Vertex AI API Security Requirements
+										<p> Vertex AI API Security Requirements <br>
 The Vertex AI API enables powerful machine learning capabilities, but it's crucial to secure data sharing, scraping, and connectivity between Python code and data formats like XML, JSON, and SQL. Here's a brief security requirements specification:
-1. Authentication and Authorization:
+<br>1. Authentication and Authorization: <br>
 Strong authentication: Use robust methods like OAuth 2.0 for API access control, ensuring only authorized users and applications can interact with the API.
 Role-based access control (RBAC): Implement fine-grained access control based on user roles, limiting access to specific resources and functionalities within the API.
-2. Data Protection:
+<br>2. Data Protection:<br>
 Data encryption: Encrypt all data in transit using HTTPS and at rest using encryption mechanisms provided by Google Cloud Platform.
 Data validation: Implement input validation to prevent malicious or malformed data from being processed by the API, mitigating risks like SQL injection.
 Secure data storage: Leverage secure storage solutions like Cloud Storage with appropriate access controls for data used by the API.
-3. API Security Best Practices:
+<br>3. API Security Best Practices:<br>
 Rate limiting: Implement rate limiting to prevent abuse and denial-of-service attacks.
 Logging and monitoring: Log API activity and monitor for suspicious patterns to detect potential security breaches.
 Vulnerability scanning: Regularly scan the API and its dependencies for vulnerabilities and apply security patches promptly.
-4. Python Code Security:
+<br>4. Python Code Security:<br>
 Secure coding practices: Follow secure coding guidelines to prevent vulnerabilities in the Python code interacting with the API.
 Dependency management: Use a dependency management tool like pip with version pinning to ensure secure and consistent dependencies.
-5. Data Format Specific Considerations:
+<br>5. Data Format Specific Considerations:<br>
 XML and JSON: Validate incoming XML and JSON data against schemas to ensure data integrity and prevent injection attacks.
 SQL: Use parameterized queries or prepared statements to prevent SQL injection vulnerabilities when interacting with SQL databases.
 By adhering to these security requirements, we can mitigate risks associated with the Vertex AI API and ensure secure data sharing, scraping, and connectivity with various data formats.</p>
