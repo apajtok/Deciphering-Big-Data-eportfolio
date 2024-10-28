@@ -21,6 +21,7 @@ This project helped me develop skills in:
 
 * Database design
 * Web scraping
-* Normalization
+* Normalisation
 * Automation
+* Data Acquiring and Storing Functions
 * Security
