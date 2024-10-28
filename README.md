@@ -6,7 +6,7 @@ I'm a marketer with a strong business background and a growing passion for data 
 
 **My Background:**
 
-* Business Administration background
+* Business Administration
 * Master's degree in Business & Management and Marketing
 * 18+ years of experience in digital marketing, collaborating closely with developers
 
@@ -20,8 +20,8 @@ I'm a marketer with a strong business background and a growing passion for data 
 This project helped me develop skills in:
 
 * Database design
-* Web scraping
 * Normalisation
-* Automation
+* Web scraping
+* Automation & Scaling
 * Data Acquiring and Storing Functions
 * Security
